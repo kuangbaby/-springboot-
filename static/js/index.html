@@ -1,0 +1,563 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>live2d 看板娘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #live2dcanvas {
+            border: 0 !important;
+        }
+    </style>
+    <script src="js/L2Dwidget.0.min.js"></script>
+    <script src="js/L2Dwidget.min.js"></script>
+</head>
+<body>
+<script>
+    /* 这个script就写在html里面，千万不要把它加入引用文件，
+    因为它需要等页面渲染完毕再执行，不然可爱的看板娘不会出来哦 */
+    L2Dwidget.init({
+        display: {
+            superSample: 2,
+            width: 150,
+            height: 400,
+            position: "left",
+            hOffset: 0,
+            vOffset: 0,
+        },
+    });
+</script>
+</body>
+</html>-->                <!-- 未实现-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width,initial-scale=1.0">  <!--大小设置-->
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--semantic引入-->
+    <link rel="stylesheet" href="../css/me.css">   <!--css内容引入-->
+</head>
+
+<body>
+<!--stackable为适应手机设计为可堆积   mobile reversed让手机端先图片后文章-->
+<!--导航  nav头footer尾-->
+<!--所用到前端组件均可从semantic中查询使用-->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <!--ui ui设计 inverted反转的意思白变黑  attached去除圆角  segment导航栏 无缩小间距class所以自定义-->
+    <div class="ui container">                  <!--container方框-->
+        <div class="ui inverted secondary stackable mobile reversed menu"><!--ui menu 黑框里的新内容 secondary去边框-->
+            <h2 class="ui teal header item">Blog</h2>    <!--header大标题-->
+            <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>首页</a>   <!--item代表是menu里的副标题 icon图标-->
+            <a herf="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>    <!--m-mobile-hide手机端隐藏-->
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <div class="right item">
+                <div class="ui icon link inverted transparent input"> <!--link虚化的感觉 input输入文本框 transparent隐藏内部白色部分-->
+                    <input type="text" placeholder="Search....">  <!--placeholder框里虚化内容-->
+                    <i class="search icon"></i>
+                </div>
+                <div class="right item">
+                    <a href="#" target="_blank" class="ui inverted basic button">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--   menu toggle自己定义的捆绑按钮-->
+    <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">   <!--m-mobile-show电脑端隐藏-->
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+<!--mid-->
+<div class="m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui mobile reversed stackable grid">
+            <div class="eleven wide column">
+                <div class="ui top attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h2 class="ui teal header">博客</h2>
+                        </div>
+                        <div class="ui right aligned column">  <!--让字不换行m-inline-block-->
+                            共<h3 class="ui orange header m-inline-block">14</h3>篇
+                        </div>
+                    </div>
+                </div>
+
+                <!--中间-->
+                <div class="ui attached segment"> <!--attached让俩部分连接起来-->
+                    <div class="ui padded vertical segment">    <!--padded内部边距 vertical上下文间距-->
+                        <div class="ui stackable mobile reversed grid">
+                            <!--内容的左边 右边放博客的图片-->
+                            <div class="ui eleven wide column">
+                                <h3 class="ui header">macOS 12.0 体验报告</h3>
+                                <p>macOS 12.0 版本在发布会上的感觉无疑是很惊艳的。相比起 11.0 Big Sur 放弃祖传 10.x 的版本号和沿用了十余年的 UI
+                                    设计带来的非议，大家现在已经开始接受了新的 UI，并且我从这套 UI 中看到了 Apple
+                                    各个产品统一风格的趋势，快速备忘录，全系统翻译和识图功能，以及现在跳票的通用控制。
+                                </p>
+                                <div class="ui grid">
+                                    <div class="ui eleven wide column">
+                                        <div class="ui horizontal link list">   <!--horizontal横的链表-->
+                                            <div class="item">
+                                                <img src="https://picsum.photos/id/1005/50/50" alt=""
+                                                     class="ui avatar image">
+                                                <div class="content"><a herf="#" class="teal header">郝浩渊</a></div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2021/12/19
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>1234
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label">详情</a>
+                                        <!--target="_blank"打开新页面-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--内容的右边 放博客的介绍 作者信息-->
+                            <div class="ui five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="https://picsum.photos/id/1/450/450" alt="" class="ui rounded image">
+                                    <!-- 图片用img class ui rounded image保证图在中间-->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui padded vertical segment m-padded-tb-large"></div>
+                    <div class="ui padded vertical segment m-padded-tb-large"></div>
+                    <div class="ui padded vertical segment m-padded-tb-large"></div>
+                    <div class="ui padded vertical segment m-padded-tb-large"></div>
+                    <div class="ui padded vertical segment m-padded-tb-large"></div>
+                </div>
+
+                <!--底部-->
+                <div class="ui bottom attached segment">
+                    <div class="ui top attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a href="#" class="ui teal basic button">上一页</a>    <!-- basic去掉底色-->
+                            </div>
+                            <div class="ui right aligned column">  <!--让字不换行m-inline-block-->
+                                <a href="#" class="ui teal basic button">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Snow">
+                    <canvas id="Snow"></canvas>
+                </div>
+            </div>
+            <!--右边导航栏-->
+            <div class="five wide column">
+                <div class="ui top segment">
+                    <div class="ui secondary top attached segment">          <!-- secondary变暗操作-->
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>分类       <!-- i打头为图标-->
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" target="_blank">more<i class="angle double right icon"></i></a>
+                                <!--a打头为链接-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached segment m-margin-top-small">
+                        <div class="ui fluid attached vertical menu">     <!-- fluid填充满-->
+                            <a href="#" target="_blank" class="item">学习日志
+                                <div class="ui teal label">14</div>
+                            </a>
+                            <!--label黑小标签 加basic去底色-->
+                            <a href="#" target="_blank" class="item">思考与感悟
+                                <div class="ui teal label">14</div>
+                            </a>
+                            <a href="#" target="_blank" class="item">清单
+                                <div class="ui teal label">14</div>
+                            </a>
+                            <a href="#" target="_blank" class="item">JavaScript
+                                <div class="ui teal label">14</div>
+                            </a>
+                            <a href="#" target="_blank" class="item">创业
+                                <div class="ui teal label">14</div>
+                            </a>
+                            <a href="#" target="_blank" class="item">认知升级
+                                <div class="ui teal label">14</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <div class="ui top attached secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="tags icon"></i>标签
+                            </div>
+                            <div class="ui right aligned column">
+                                <a href="#" target="_blank" class="item"><i class="angle double right icon"></i>more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached segment">             <!--left pointing label箭头向左的label-->
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                        <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny">35岁失业秃头 <div class="detail">35</div></a>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <div class="ui top secondary attached segment">
+                        <div class="ui two column grid">
+                            <div class="ui column">
+                                <i class="tasks icon"></i>最新推荐
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" target="_blank" class="item"><i class="angle double right icon"></i>more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                    <div class="ui attached segment">
+                        <a href="#" class="m-black" target="_blank">好好学习，天天向上</a>
+                    </div>
+                </div>
+                <!--二维码-->
+                <h4 class="ui horizontal divider header">扫码关注我</h4>   <!--分割线-->
+                <div class="ui centered card"style="width: 200px">        <!--centered居中-->
+                    <img src="/static/images/wechat.png" alt="" class="ui rounded image">
+                </div>
+            </div>
+        </div>
+    </div>      <!-- container容器能根据屏幕尺寸达到最好效果-->
+</div>
+<!--底部footer-->
+<footer class="ui inverted attached vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted stackable mobile reversed divided grid">                              <!--grid把一行默认分为了16份  divided分割线-->
+            <div class="left aligned three wide column"><h4>联系方式</h4>   <!-- 方向+aligned对齐操作 wide填满 column列-->
+                <img src="../images/wechat.png" class="ui rounded image" alt="" style="width: 250px">  <!--图片插入过程-->
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">最新博客</h4>
+                <div class="ui inverted link list">         <!--链表引入-->
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户体验</a>
+                    <a href="#" class="item">用户反馈</a>
+                    <a href="#" class="item">用户过程</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui center aligned inverted header">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">电话：13219625189</a>
+                    <a href="#" class="item">Email：1349895715@@qq.com</a>
+                    <a href="#" class="item">QQ：1349895715</a>
+                    <a href="#" class="item">微信：13219625189</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui center aligned inverted header">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">>这是我的个人博客，会分享我的学习生活日常，希望可以为你带来帮助</a>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>  <!--divider分割线-->
+        <h4 class="m-text-thin m-text-spaced m-opacity-tiny">Copyright@2020-2021 Lirenmi by Haohaoyuan</h4>
+    </div>
+    </div>
+</footer>
+
+<!--添加完jquery记得alt+回车确认下载组件-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>              <!--jsdliver引入-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> <!--semantic引入-->
+<script>
+    $('.menu.toggle').click(function (){
+        $('.m.item').toggleClass('m-mobile-hide');
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- 爱心特效 -->
+<script type="text/javascript">
+    (function (window, document, undefined) {
+        var hearts = [];
+        window.requestAnimationFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    setTimeout(callback, 1000 / 60);
+                }
+        })();
+        init();
+
+        function init() {
+            css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+            attachEvent();
+            gameloop();
+        }
+
+        function gameloop() {
+            for (var i = 0; i < hearts.length; i++) {
+                if (hearts[i].alpha <= 0) {
+                    document.body.removeChild(hearts[i].el);
+                    hearts.splice(i, 1);
+                    continue;
+                }
+                hearts[i].y--;
+                hearts[i].scale += 0.004;
+                hearts[i].alpha -= 0.013;
+                hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+            }
+            requestAnimationFrame(gameloop);
+        }
+
+        function attachEvent() {
+            var old = typeof window.onclick === "function" && window.onclick;
+            window.onclick = function (event) {
+                old && old();
+                createHeart(event);
+            }
+        }
+
+        function createHeart(event) {
+            var d = document.createElement("div");
+            d.className = "heart";
+            hearts.push({
+                el: d,
+                x: event.clientX - 5,
+                y: event.clientY - 5,
+                scale: 1,
+                alpha: 1,
+                color: randomColor()
+            });
+            document.body.appendChild(d);
+        }
+
+        function css(css) {
+            var style = document.createElement("style");
+            style.type = "text/css";
+            try {
+                style.appendChild(document.createTextNode(css));
+            } catch (ex) {
+                style.styleSheet.cssText = css;
+            }
+            document.getElementsByTagName('head')[0].appendChild(style);
+        }
+
+        function randomColor() {
+            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+        }
+    })(window, document);
+</script>
+<!-- 爱心特效 -->
+
+
+<!-- 鼠标点击特效 -->
+<body>
+<a name="top"></a>
+<div id="page_begin_html">
+    <script src="https://blog-static.cnblogs.com/files/lq0001/silence.min.js"></script>
+    <!-- <script type="text/javascript">initModel()</script> -->
+    <!-- 鼠标点击特效 -->
+
+    <script src="https://files.cnblogs.com/files/graytido/cursor-effects.js"></script>
+
+    <!-- 鼠标点击特效end -->
+
+    <style>
+        /** 鼠标样式 **/
+        body {
+            cursor: url(https://www.tiezi.xyz/usr/uploads/2017/08/149116970.png), auto;
+        }
+
+        a, a:visited {
+            cursor: url(https://www.tiezi.xyz/usr/uploads/2017/08/1738446070.png), auto;
+        }
+    </style>
+</div>
+<!-- 鼠标点击特效 -->
+<!--雪花-->
+<script>
+    (function ($) {
+        $.fn.snow = function (options) {
+            var $flake = $('<div />')
+                .css({
+                    'position': 'fixed',//'absolute',
+                    'top': '-50px',
+                    'z-index': '1000'
+                })
+                .html('&#10052;');
+            var documentHeight = document.documentElement.clientHeight;//$(document).height();
+            var documentWidth = $(document).width();
+            var defaults = {minSize: 10, maxSize: 20, newOn: 500, flakeColor: "#FFFFFF"};
+            var options = $.extend({}, defaults, options);
+            var interval = setInterval(function () {
+                var startPositionLeft = Math.random() * documentWidth - 100;
+                var startOpacity = 0.5 + Math.random();
+                var sizeFlake = options.minSize + Math.random() * options.maxSize;
+                var endPositionTop = documentHeight - 40;
+                var endPositionLeft = startPositionLeft - 100 + Math.random() * 200;
+                var durationFall = documentHeight * 10 + Math.random() * 5000;
+                $flake.clone()
+                    .appendTo('body')
+                    .css({
+                        left: startPositionLeft,
+                        opacity: startOpacity,
+                        'font-size': sizeFlake,
+                        color: options.flakeColor
+                    })
+                    .animate({
+                            top: endPositionTop,
+                            left: endPositionLeft,
+                            opacity: 0.2
+                        },
+                        durationFall,
+                        'linear',
+                        function () {
+                            $(this).remove();
+                        });
+            }, options.newOn);
+        };
+    })(jQuery);
+
+
+    $.fn.snow({minSize: 10, maxSize: 50, newOn: 1000, flakeColor: '#ccc'});
+</script>
+<!--雪花-->
+
+
+<!--线条随鼠标流动-->
+<script>
+    !function () {
+        function n(n, e, t) {
+            return n.getAttribute(e) || t
+        }
+
+        function e(n) {
+            return document.getElementsByTagName(n)
+        }
+
+        function t() {
+            var t = e("script"), o = t.length, i = t[o - 1];
+            return {
+                l: o, z: n(i, "zIndex", -1), o: n(i, "opacity", .5), c: n(i, "color", "0,0,0"), n: n(i, "count", 99)
+            }
+        }
+
+        function o() {
+            a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        }
+
+        function i() {
+            r.clearRect(0, 0, a, c);
+            var n, e, t, o, m, l;
+            s.forEach(function (i, x) {
+                for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+                null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y,
+                    l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m),
+                    t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+            }),
+                x(i)
+        }
+
+        var a, c, u, m = document.createElement("canvas"),
+            d = t(), l = "c_n" + d.l, r = m.getContext("2d"),
+            x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function (n) {
+                    window.setTimeout(n, 1e3 / 45)
+                },
+            w = Math.random, y = {x: null, y: null, max: 2e4};
+        m.id = l, m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o, e("body")[0].appendChild(m), o(), window.onresize = o,
+            window.onmousemove = function (n) {
+                n = n || window.event, y.x = n.clientX, y.y = n.clientY
+            },
+            window.onmouseout = function () {
+                y.x = null, y.y = null
+            };
+        for (var s = [], f = 0; d.n > f; f++) {
+            var h = w() * a, g = w() * c, v = 2 * w() - 1, p = 2 * w() - 1;
+            s.push({x: h, y: g, xa: v, ya: p, max: 6e3})
+        }
+        u = s.concat([y]),
+            setTimeout(function () {
+                i()
+            }, 100)
+    }();
+</script>
+<!--线条随鼠标流动-->
+
+
+<!--鼠标点击弹出社会主义核心价值观-->
+<script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+        $("body").click(function (e) {
+            var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤");
+            var $i = $("<span></span>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function () {
+                    $i.remove();
+                });
+        });
+    });
+</script>-->
+<!--鼠标点击弹出社会主义核心价值观-->
+<!-- 雪花 -->
+
+<script src="https://files.cnblogs.com/files/structmooc/%E9%9B%AA%E8%8A%B1.js"></script>
+<!-- 雪花 -->
+
+
+</body>
+</body>
+</html>
